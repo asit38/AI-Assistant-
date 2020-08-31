@@ -1,0 +1,18 @@
+# changing voices of assistant
+# changing voice rate of assistant
+
+
+import pyttsx3
+
+
+engine = pyttsx3.init()
+voice = engine.getProperty("voices")
+engine.setProperty('voice', voice[2].id)
+newvoicerate = 150
+engine.setProperty('rate', newvoicerate)
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+speak("hey there how r u ?")
+
