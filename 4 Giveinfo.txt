@@ -1,0 +1,29 @@
+import pyttsx3, datetime
+
+engine = pyttsx3.init()
+
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+
+def time():
+    Time = datetime.datetime.now().strftime("%I:%M:%S")
+    speak(Time)
+
+def date():
+    year = int(datetime.datetime.now().year)
+    month = int(datetime.datetime.now().month)
+    date = int(datetime.datetime.now().day)
+    speak(date)
+    speak(month)
+    speak(year)
+
+def giveinfo():
+    speak("welcome back osit ")
+    speak("now the time is")
+    time()
+    speak("todays date")
+    date()
+    speak("how can i help you")
+
+giveinfo()
