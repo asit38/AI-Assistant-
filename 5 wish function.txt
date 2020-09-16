@@ -1,0 +1,12 @@
+# wish function
+
+
+hour = datetime.datetime.now().hour
+    if hour >= 6 and hour<12:
+        speak("good morning!")
+    elif hour >= 12 and hour<18:
+        speak("Good afternoon!")
+    elif hour >= 18 and hour<24:
+        speak("good evening!")
+    else:
+        speak("good night")
